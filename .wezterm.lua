@@ -14,6 +14,7 @@ end
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Dark+'
+config.font = wezterm.font('MesloLGS NF')
 config.keys = {
   -- Turn off the default CMD-m Hide action, allowing CMD-m to
   -- be potentially recognized and handled by the tab
