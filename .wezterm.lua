@@ -13,6 +13,10 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
+use_fancy_tab_bar = false
+--config.window_decorations = "RESIZE"
+config.hide_tab_bar_if_only_one_tab = true
+window_decorations = "INTEGRATED_BUTTONS"
 config.color_scheme = 'Dark+'
 config.font = wezterm.font('MesloLGS NF')
 config.keys = {
@@ -20,6 +24,6 @@ config.keys = {
   -- be potentially recognized and handled by the tab
   {key = 'h', mods = 'CTRL|SHIFT', action = wezterm.action.SplitHorizontal {domain = 'CurrentPaneDomain'}},
   {key = 'g', mods = 'CTRL|SHIFT', action = wezterm.action.SplitVertical {domain = 'CurrentPaneDomain'}},
-}
+ }
 -- and finally, return the configuration to wezterm
 return config
