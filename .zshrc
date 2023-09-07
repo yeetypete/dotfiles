@@ -8,6 +8,9 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# disable compfix for distrobox
+ZSH_DISABLE_COMPFIX=true
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -157,3 +160,10 @@ alias jce='jupyter console --existing'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# add go path
+PATH=/usr/local/go/bin:$PATH
+
+# add texlive to path
+MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
+INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
+PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
