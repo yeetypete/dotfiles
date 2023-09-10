@@ -134,14 +134,18 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # distrobox ros setup
-if [ "$CONTAINER_ID" = "ros-noetic" ]; then
+if [ "$(hostname)" = "ros-noetic.peter-ubuntu-desktop" ]; then
   source /opt/ros/noetic/setup.zsh
   alias code="distrobox-host-exec code"
+  alias git="distrobox-host-exec git"
+  export CONTAINER_ID=ros-noetic
 fi
 
-if [ "$CONTAINER_ID" = "ros-humble" ]; then
+if [ "$(hostname)" = "ros-humble.peter-ubuntu-desktop" ]; then
   source /opt/ros/humble/setup.zsh
   alias code="distrobox-host-exec code"
+  alias git="distrobox-host-exec git"
+  export CONTAINER_ID=ros-humble
 fi
 
 # dotfiles
