@@ -8,9 +8,6 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# disable compfix for distrobox
-ZSH_DISABLE_COMPFIX=true
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -139,10 +136,12 @@ unset __conda_setup
 # distrobox ros setup
 if [ "$CONTAINER_ID" = "ros-noetic" ]; then
   source /opt/ros/noetic/setup.zsh
+  alias code="distrobox-host-exec code"
 fi
 
 if [ "$CONTAINER_ID" = "ros-humble" ]; then
   source /opt/ros/humble/setup.zsh
+  alias code="distrobox-host-exec code"
 fi
 
 # dotfiles
