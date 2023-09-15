@@ -154,7 +154,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # direnv if installed
 if command -v direnv &> /dev/null
 then
-  eval "$(direnv hook zsh)"
+  eval "$(direnv hook $SHELL)"
 fi
 
 # connect to existing jupyter console
