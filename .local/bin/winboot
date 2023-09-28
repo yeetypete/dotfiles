@@ -1,0 +1,3 @@
+#!/bin/bash
+WINDOWS_ENTRY=$(grep -i "windows" /boot/grub/grub.cfg | cut -d"'" -f2)
+sudo grub-reboot "$WINDOWS_ENTRY" && sudo reboot
