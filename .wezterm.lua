@@ -11,7 +11,8 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
-
+-- config.initial_cols = 89
+-- config.initial_rows = 26
 -- For example, changing the color scheme:
 use_fancy_tab_bar = false
 --config.window_decorations = "RESIZE"
