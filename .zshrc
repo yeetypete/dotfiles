@@ -173,3 +173,5 @@ PATH=/usr/local/go/bin:$PATH
 MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
 INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
 PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
