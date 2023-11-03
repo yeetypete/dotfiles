@@ -117,6 +117,7 @@ source $ZSH/oh-my-zsh.sh
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
   export SSH_AUTH_SOCK=~/.1password/agent.sock
+  export GIT_SSH_COMMAND="ssh -o IdentityAgent=$SSH_AUTH_SOCK"
 fi
 
 PATH=$PATH:/home/psiegel/.local/bin
