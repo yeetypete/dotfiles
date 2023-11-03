@@ -119,7 +119,7 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
   export SSH_AUTH_SOCK=~/.1password/agent.sock
 fi
 
-if [- z "$SSH_TTY" ]; then
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   export GIT_SSH_COMMAND="ssh -o IdentityAgent=$SSH_AUTH_SOCK"
 fi
 
