@@ -114,7 +114,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export SSH_AUTH_SOCK=~/.1password/agent.sock
+
+if [ -z "$SSH_AUTH_SOCK" ]; then
+  export SSH_AUTH_SOCK=~/.1password/agent.sock
+fi
 
 PATH=$PATH:/home/psiegel/.local/bin
 
