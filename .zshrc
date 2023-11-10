@@ -179,3 +179,6 @@ INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
 PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias ac_sync='rsync -azP --exclude "conda*" cvaiac:/srv/beegfs-benderdata/scratch/ac_course_42/data/ $HOME/ac_course/data'
+alias ac_mnt='sshfs -o follow_symlinks cvaiac:/srv/beegfs-benderdata/scratch/ac_course_42/data $HOME/mnt/cvaiac'
