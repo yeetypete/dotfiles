@@ -6,12 +6,19 @@ if [[ "$1" = "connect" ]]
 then
     # get credentials using 1password cli
     USERNAME="psiegel@student-net.ethz.ch"
-    PASSWORD=$(op read "op://Personal/Radius ethz/newPassword")
+    OP_READ_OUT=$(op read "op://Personal/Radius ethz/newPassword")
+    OP_READ_EXIT_CODE=$?
+
+    if [[ $OP_READ_EXIT_CODE -ne 0 ]]; then
+        echo "$OP_READ_OUT"
+        exit $OP_READ_EXIT_CODE
+    fi
+
     HOST=${2:-$DEFAULT_HOST}
 
     /opt/cisco/secureclient/bin/vpn -s connect $HOST <<EOF
 $USERNAME
-$PASSWORD
+$OP_READ_OUT
 EOF
 else
     # pass the command through to the Cisco VPN client
