@@ -1,0 +1,19 @@
+#!/bin/bash
+
+DEFAULT_HOST="sslvpn.ethz.ch/student-net"
+
+if [[ "$1" = "connect" ]]
+then
+    # get credentials using 1password cli
+    USERNAME="psiegel@student-net.ethz.ch"
+    PASSWORD=$(op read "op://Personal/Radius ethz/newPassword")
+    HOST=${2:-$DEFAULT_HOST}
+
+    /opt/cisco/secureclient/bin/vpn -s connect $HOST <<EOF
+$USERNAME
+$PASSWORD
+EOF
+else
+    # pass the command through to the Cisco VPN client
+    /opt/cisco/secureclient/bin/vpn "$1"
+fi
