@@ -15,6 +15,7 @@ end
 -- config.initial_rows = 26
 -- For example, changing the color scheme:
 use_fancy_tab_bar = false
+config.warn_about_missing_glyphs = false
 --config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 window_decorations = "INTEGRATED_BUTTONS"
