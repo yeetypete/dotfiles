@@ -182,3 +182,12 @@ PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
 
 alias ac_sync='rsync -azP --exclude "conda*" cvaiac:/srv/beegfs-benderdata/scratch/ac_course_42/data/ $HOME/ac_course/data'
 alias ac_mnt='sshfs -o follow_symlinks cvaiac:/srv/beegfs-benderdata/scratch/ac_course_42/data $HOME/mnt/cvaiac'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export EDITOR="$HOME/.local/bin/micro"
+export SOPS_AGE_KEY_FILE="$HOME/.config/sops/key.txt"
+
+eval "$(resticprofile generate --zsh-completion)"
