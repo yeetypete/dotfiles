@@ -115,9 +115,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -z "$SSH_AUTH_SOCK" ]; then
-  export SSH_AUTH_SOCK=~/.1password/agent.sock
-fi
+export SSH_AUTH_SOCK=~/.1password/agent.sock
 
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   export GIT_SSH_COMMAND="ssh -o IdentityAgent=$SSH_AUTH_SOCK"
@@ -187,7 +185,27 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export EDITOR="/usr/local/bin/micro"
 export SOPS_AGE_KEY_FILE="$HOME/.config/sops/key.txt"
 
-eval "$(resticprofile generate --zsh-completion)"
+if command -v resticprofile >/dev/null 2>&1; then
+    eval "$(resticprofile generate --zsh-completion)"
+fi
+
+export VISUAL=micro
+if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
+
+function r {
+    local IFS=$'\t\n'
+    local tempfile="$(mktemp -t tmp.XXXXXX)"
+    local ranger_cmd=(
+        command
+        ranger
+        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
+    )
+
+    ${ranger_cmd[@]} "$@"
+    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
+        cd -- "$(cat "$tempfile")" || return
+    fi
+    command rm -f -- "$tempfile" 2>/dev/null
+}
