@@ -1,0 +1,9 @@
+{
+    "icons": [ "awesome-fonts" ],
+    "defaults": {
+        "separator-block-width": 8,
+        "separator": "",
+        "fg": "#EFEFEF",
+        "bg": "#000000"
+    }
+}
