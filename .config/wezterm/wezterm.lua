@@ -19,6 +19,7 @@ config.enable_tab_bar = false
 config.check_for_updates = false
 config.font_size = 12.0
 config.color_scheme = "Dark+"
+config.default_prog = {"/usr/bin/fish", "-l"}
 
 config.keys = {}
 -- and finally, return the configuration to wezterm
