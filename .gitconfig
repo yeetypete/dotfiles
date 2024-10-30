@@ -1,16 +1,18 @@
 [user]
-  email = psiegel2000@icloud.com
-  name = Peter Siegel
+	email = psiegel2000@icloud.com
+	name = Peter Siegel
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDPZk0mjEzdr1UaZ9NAR/SaK5kmeXqMLvIF7b7ZURjag
 [gpg]
-  format = ssh
+	format = ssh
 [gpg "ssh"]
-  program = "/opt/1Password/op-ssh-sign"
+	program = "/opt/1Password/op-ssh-sign"
 [commit]
-  gpgsign = true
+	gpgsign = true
 [init]
-  defaultBranch = main
+	defaultBranch = main
 [credential]
-  helper = "!f() { /home/psiegel/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node /tmp/vscode-remote-containers-949b6f28-d28f-424d-aec2-3f737650e067.js git-credential-helper $*; }; f"
+	helper = "!f() { /home/psiegel/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node /tmp/vscode-remote-containers-949b6f28-d28f-424d-aec2-3f737650e067.js git-credential-helper $*; }; f"
 [pull]
-  rebase = false
+	rebase = false
+[push]
+	autoSetupRemote = true
