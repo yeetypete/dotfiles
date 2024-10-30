@@ -235,7 +235,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 exec --no-startup-id 1password --silent
 exec --no-startup-id barrier
 exec --no-startup-id flatpak run com.discordapp.Discord --start-minimized
-exec --no-startup-id xrandr --output DP-4.8 --primary --left-of DP-2.8
+exec_always --no-startup-id xrandr --output DP-2.8 --primary --left-of DP-4.8
 
 # sleep
 set $Locker i3lock && sleep 1
