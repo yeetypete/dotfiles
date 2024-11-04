@@ -5,9 +5,7 @@ end
 set fish_greeting
 
 # Configure 1password SSH agent
-if test -z "$SSH_AUTH_SOCK"
-    set -x SSH_AUTH_SOCK ~/.1password/agent.sock
-end
+set -x SSH_AUTH_SOCK ~/.1password/agent.sock
 
 if test -n "$SSH_CLIENT" || test -n "$SSH_TTY"
     set -x GIT_SSH_COMMAND "ssh -o IdentityAgent=$SSH_AUTH_SOCK"
