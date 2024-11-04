@@ -4,9 +4,6 @@ end
 
 set fish_greeting
 
-# Configure 1password SSH agent
-set -x SSH_AUTH_SOCK ~/.1password/agent.sock
-
 fish_add_path $HOME/.local/bin
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
