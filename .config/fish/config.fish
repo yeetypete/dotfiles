@@ -9,7 +9,7 @@ if test -z "$SSH_AUTH_SOCK"
     set -x SSH_AUTH_SOCK ~/.1password/agent.sock
 end
 
-if test -n "$SSH_CLIENT" -o -n "$SSH_TTY"
+if test -n "$SSH_CLIENT" || test -n "$SSH_TTY"
     set -x GIT_SSH_COMMAND "ssh -o IdentityAgent=$SSH_AUTH_SOCK"
 end
 
