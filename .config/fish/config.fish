@@ -7,10 +7,6 @@ set fish_greeting
 # Configure 1password SSH agent
 set -x SSH_AUTH_SOCK ~/.1password/agent.sock
 
-if test -n "$SSH_CLIENT" || test -n "$SSH_TTY"
-    set -x GIT_SSH_COMMAND "ssh -o IdentityAgent=$SSH_AUTH_SOCK"
-end
-
 fish_add_path $HOME/.local/bin
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
