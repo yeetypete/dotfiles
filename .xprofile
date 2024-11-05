@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Set built-in display as primary
 display_name=$(xrandr --listmonitors | awk '/eDP/ {print $4; exit}')
 
