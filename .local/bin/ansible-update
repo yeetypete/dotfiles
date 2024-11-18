@@ -3,4 +3,4 @@
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 export ANSIBLE_FORCE_COLOR=1
 export PY_COLORS=1
-ansible-pull ansible/desktops.yml -U git@github.com:yeetypete/homelab.git -i ansible/inventory/inventory.yml -e override_hosts=localhost -K
+ansible-pull ansible/desktops.yml -U git@github.com:yeetypete/homelab.git -i ansible/inventory/inventory.yml -e override_hosts=localhost -K "$@"
