@@ -6,6 +6,8 @@ set fish_greeting
 
 fish_add_path $HOME/.local/bin
 
+zoxide init fish | source
+
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # pnpm
