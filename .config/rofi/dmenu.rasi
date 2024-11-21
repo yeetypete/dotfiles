@@ -7,7 +7,7 @@
 * {
     background-color: #222222;
     text-color: #BBBBBB;
-    font: "Monospace 14";
+    font: "mono 14";
 }
 
 window {
