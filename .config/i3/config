@@ -63,7 +63,7 @@ bindsym $mod+Shift+Return exec --no-startup-id x-www-browser
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme dmenu -show-icons -terminal wezterm
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # change focus
 bindsym $mod+j focus left
