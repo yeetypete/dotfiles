@@ -1,7 +1,6 @@
 configuration {
     show-icons: true;
     terminal: "wezterm";
-    run-shell-command: "{terminal} -e fish -ic '{cmd}'";
 }
 
 @theme "dmenu"
