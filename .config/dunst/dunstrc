@@ -1,8 +1,11 @@
 [global]
     follow = mouse
     width = (0, 300)
-    transparency = 50
-    show_indicators = yes
+    height = 300
+    progress_bar_height = 4
+    progress_bar_corner_radius = 1
+    frame_width = 1
+    font = Monospace 8
     enable_recursive_icon_lookup = true
     icon_theme = Adwaita
     corner_radius = 4
