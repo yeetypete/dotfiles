@@ -8,7 +8,7 @@ fish_add_path $HOME/.local/bin
 
 zoxide init fish | source
 
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # pnpm
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
