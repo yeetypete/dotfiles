@@ -9,8 +9,8 @@
     enable_recursive_icon_lookup = true
     icon_theme = Adwaita
     corner_radius = 4
-    mouse_left_click = close_current
-    mouse_middle_click = do_action, close_current
+    mouse_left_click = do_action, close_current
+    mouse_middle_click = close_current
     mouse_right_click = close_all
     frame_color = "#d8d8d8"
     separator_color = "#d8d8d8"
