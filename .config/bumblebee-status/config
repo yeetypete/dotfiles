@@ -1,6 +1,6 @@
 [core]
-modules=playerctl, pulseout, pulsein, xrandr, brightness, caffeine, battery, datetime, dunstctl
-theme=iceblack
+modules=playerctl, pulseout, pulsein, xrandr, brightness, caffeine, battery-upower, datetime, dunstctl
+theme=dark
 
 [module-parameters]
 playerctl.layout=playerctl.prev, playerctl.pause, playerctl.next

@@ -6,7 +6,10 @@ set fish_greeting
 
 fish_add_path $HOME/.local/bin
 
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+zoxide init fish | source
+direnv hook fish | source
+
+alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 task --completion fish | source
 
