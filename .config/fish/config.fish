@@ -10,7 +10,10 @@ zoxide init fish | source
 direnv hook fish | source
 
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-set -x SSH_AUTH_SOCK ~/.1password/agent.sock
+
+if test -z "$SSH_TTY"
+    set -x SSH_AUTH_SOCK ~/.1password/agent.sock
+end
 
 # pnpm
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
