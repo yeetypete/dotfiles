@@ -7,4 +7,4 @@ if [ -n "$display_name" ]; then
     xrandr --output "$display_name" --primary
 fi
 
-xrandr --output DP-4 --primary
+xrandr --output eDP-1-1 --primary

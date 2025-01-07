@@ -1,7 +1,7 @@
 [user]
-	email = psiegel2000@icloud.com
+	email = psiegel@gravisrobotics.com
 	name = Peter Siegel
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDPZk0mjEzdr1UaZ9NAR/SaK5kmeXqMLvIF7b7ZURjag
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILbpVGiNHDh1CGXRMP72ZMGLPFSmHau8ODKU2ev1Zfc0
 [gpg]
 	format = ssh
 [gpg "ssh"]
