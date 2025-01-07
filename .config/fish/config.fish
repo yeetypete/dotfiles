@@ -6,9 +6,12 @@ set fish_greeting
 
 fish_add_path $HOME/.local/bin
 
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias gtask="task -t ~/git/docker/Taskfile.yml"
 
 task --completion fish | source
+
+set -x SSH_AUTH_SOCK ~/.1password/agent.sock
 
 # pnpm
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
