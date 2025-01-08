@@ -11,6 +11,10 @@ direnv hook fish | source
 
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
+if not set -q SSH_TTY
+    set -x SSH_AUTH_SOCK ~/.1password/agent.sock
+end
+
 # pnpm
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
