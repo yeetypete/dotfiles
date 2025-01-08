@@ -36,3 +36,6 @@ else
 end
 # <<< conda initialize <<<
 
+set -x ANSIBLE_VAULT_PASSWORD_FILE ~/.ansible/vault.pass
+alias gtask="task -t /home/psiegel/git/docker/Taskfile.yml"
+alias g-ansible-dev="task -t /home/psiegel/git/setup/Taskfile.yml ansible:run:computer"
