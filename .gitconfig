@@ -4,8 +4,6 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDPZk0mjEzdr1UaZ9NAR/SaK5kmeXqMLvIF7b7ZURjag
 [gpg]
 	format = ssh
-[gpg "ssh"]
-	program = "/opt/1Password/op-ssh-sign"
 [commit]
 	gpgsign = true
 [init]
