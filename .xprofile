@@ -1,8 +1,0 @@
-#!/bin/sh
-
-# Set built-in display as primary
-display_name=$(xrandr --listmonitors | awk '/eDP/ {print $4; exit}')
-
-if [ -n "$display_name" ]; then
-    xrandr --output "$display_name" --primary
-fi
