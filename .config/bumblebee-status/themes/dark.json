@@ -3,7 +3,7 @@
     "defaults": {
         "separator-block-width": 8,
         "separator": "",
-        "fg": "#cccccc",
+        "fg": "#888888",
         "bg": "#000000"
     }
 }
