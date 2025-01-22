@@ -179,8 +179,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-        tray_output primary
 	status_command bumblebee-status
+        hidden_state hide
+        mode hide
+        modifier $mod
+        tray_output primary
 }
 
 # background
