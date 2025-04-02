@@ -9,5 +9,4 @@ ansible-pull ansible/desktops.yml \
     -U git@github.com:yeetypete/homelab.git \
     -C main \
     -i ansible/inventory/inventory.yml \
-    -C main \
     -e override_hosts=localhost -K "$@"
