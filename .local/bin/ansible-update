@@ -3,7 +3,7 @@
 export ANSIBLE_FORCE_COLOR=1
 export PY_COLORS=1
 export PYTHONUNBUFFERED=1
-export ANSIBLE_HOST_PATTERN_MISMATCH=error
+export ANSIBLE_HOST_PATTERN_MISMATCH=ignore
 
 ansible-pull ansible/desktops.yml \
     -U git@github.com:yeetypete/homelab.git \
