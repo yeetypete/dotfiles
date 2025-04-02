@@ -3,9 +3,11 @@
 export ANSIBLE_FORCE_COLOR=1
 export PY_COLORS=1
 export PYTHONUNBUFFERED=1
+export ANSIBLE_HOST_PATTERN_MISMATCH=error
 
 ansible-pull ansible/desktops.yml \
     -U git@github.com:yeetypete/homelab.git \
     -C main \
     -i ansible/inventory/inventory.yml \
+    -C main \
     -e override_hosts=localhost -K "$@"
