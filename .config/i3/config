@@ -187,7 +187,7 @@ bar {
 }
 
 # background
-exec_always --no-startup-id --no-fehbg --bg-fill $HOME/Pictures/Wallpapers/nasa-jp.png
+exec_always --no-startup-id feh --no-fehbg --bg-fill $HOME/Pictures/Wallpapers/nasa-jp.png
 
 # gnome-keyring
 exec --no-startup-id dbus-update-activation-environment --all
