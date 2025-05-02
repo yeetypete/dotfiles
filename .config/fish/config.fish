@@ -10,6 +10,7 @@ zoxide init fish | source
 direnv hook fish | source
 
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias winboot="$HOME/.local/bin/winboot"
 
 if not set -q SSH_CONNECTION
     set -x SSH_AUTH_SOCK ~/.1password/agent.sock
