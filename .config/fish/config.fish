@@ -6,8 +6,20 @@ set fish_greeting
 
 fish_add_path $HOME/.local/bin
 
-zoxide init fish | source
-direnv hook fish | source
+if type -q go
+    fish_add_path (go env GOPATH)/bin
+end
+if type -q zoxide
+    zoxide init fish | source
+end
+
+if type -q direnv
+    direnv hook fish | source
+end
+
+if type -q task
+    task --completion fish | source
+end
 
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
