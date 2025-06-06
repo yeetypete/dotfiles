@@ -7,7 +7,7 @@ set fish_greeting
 fish_add_path $HOME/.local/bin
 
 if type -q go
-    fish_add_path (go env GOPATH)/bin
+    set -x GOPATH $HOME/go
 end
 if type -q zoxide
     zoxide init fish | source
