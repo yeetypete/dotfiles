@@ -62,8 +62,8 @@ bindsym $mod+Shift+Return exec --no-startup-id x-www-browser
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun
+# start rofi (a program launcher)w
+bindsym $mod+d exec --no-startup-id rofi -show drun -run-command "fish -i -c '{cmd}'"
 bindsym $mod+shift+d exec --no-startup-id rofi -show window
 
 
