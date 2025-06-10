@@ -26,8 +26,11 @@ if type -q uvx
 end
 
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+# autorandr
 alias ard="autorandr default"
 alias arg="autorandr game"
+alias arw="autorandr work"
 
 if not set -q SSH_CONNECTION
     set -x SSH_AUTH_SOCK ~/.1password/agent.sock
