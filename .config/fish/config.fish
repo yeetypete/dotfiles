@@ -18,6 +18,12 @@ end
 if type -q task
     task --completion fish | source
 end
+if type -q uv
+    uv generate-shell-completion fish | source
+end
+if type -q uvx
+    uvx --generate-shell-completion fish | source
+end
 
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ard="autorandr default"
