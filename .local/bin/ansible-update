@@ -6,8 +6,20 @@ export PYTHONUNBUFFERED=1
 export ANSIBLE_HOST_PATTERN_MISMATCH=ignore
 export ANSIBLE_LOG_PATH=$HOME/.ansible/log
 
+extra_opts=""
+
+if [[ -z "$ANSIBLE_VAULT_PASSWORD_FILE" ]]; then
+    if [[ -f "$HOME/.vault.pass" ]]; then
+        export ANSIBLE_VAULT_PASSWORD_FILE="$HOME/.vault.pass"
+    else
+        export ANSIBLE_ASK_VAULT_PASS=True
+    fi
+fi
+
+# shellcheck disable=SC2086
 ansible-pull ansible/desktops.yml \
     -U git@github.com:yeetypete/homelab.git \
     -C main \
     -i ansible/inventory/inventory.yml \
-    -e override_hosts=localhost -K "$@"
+    -e override_hosts=localhost \
+    $extra_opts "$@"
