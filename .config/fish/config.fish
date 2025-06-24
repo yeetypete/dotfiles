@@ -1,5 +1,20 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    if type -q zoxide
+    zoxide init fish | source
+    end
+    if type -q direnv
+        direnv hook fish | source
+    end
+    if type -q task
+        task --completion fish | source
+    end
+    if type -q uv
+        uv generate-shell-completion fish | source
+    end
+    if type -q uvx
+        uvx --generate-shell-completion fish | source
+    end
 end
 
 set fish_greeting
@@ -8,21 +23,6 @@ fish_add_path $HOME/.local/bin
 
 if type -q go
     set -x GOPATH $HOME/go
-end
-if type -q zoxide
-    zoxide init fish | source
-end
-if type -q direnv
-    direnv hook fish | source
-end
-if type -q task
-    task --completion fish | source
-end
-if type -q uv
-    uv generate-shell-completion fish | source
-end
-if type -q uvx
-    uvx --generate-shell-completion fish | source
 end
 
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
