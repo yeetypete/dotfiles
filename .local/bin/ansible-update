@@ -8,12 +8,9 @@ export ANSIBLE_LOG_PATH=$HOME/.ansible/log
 
 extra_opts=""
 
-if [[ -z "$ANSIBLE_VAULT_PASSWORD_FILE" ]]; then
-    if [[ -f "$HOME/.vault.pass" ]]; then
-        export ANSIBLE_VAULT_PASSWORD_FILE="$HOME/.vault.pass"
-    else
-        export ANSIBLE_ASK_VAULT_PASS=True
-    fi
+# Check if passwordless sudo is enabled.
+if ! sudo -n true 2>/dev/null; then
+    extra_opts+=" --ask-become-pass"
 fi
 
 # shellcheck disable=SC2086
