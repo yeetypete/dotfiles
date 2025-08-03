@@ -205,7 +205,7 @@ exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
 
 # brightness controls (requires brightnessctl)
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10-%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10-% -n
 
 
 # hide title bars
