@@ -73,7 +73,6 @@
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.inheritEnv": false,
     "terminal.integrated.fontFamily": "MesloLGS NF",
-    "terminal.integrated.shellIntegration.enabled": false,
     "window.menuBarVisibility": "hidden",
     "workbench.startupEditor": "none",
     "latex-workshop.formatting.latex": "tex-fmt",
@@ -82,4 +81,18 @@
     "chat.agent.enabled": true,
     "docker.extension.enableComposeLanguageServer": false,
     "python.analysis.typeCheckingMode": "strict",
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
 }
