@@ -1,99 +1,95 @@
 {
-    "[astro]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+  },
+  "[yaml]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.autoIndent": "keep",
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.insertSpaces": true,
+    "editor.quickSuggestions": {
+      "comments": false,
+      "other": true,
+      "strings": true
     },
-    "[css]": {
-        "editor.defaultFormatter": "vscode.css-language-features"
+    "editor.tabSize": 2
+  },
+  "cSpell.enabled": true,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "editor.stickyScroll.enabled": true,
+  "files.associations": {
+    "*.env": "properties",
+    "*.hujson": "jsonc",
+    ".ansible-lint": "ansible"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "plaintext": false,
+    "scminput": false
+  },
+  "json.schemas": [
+    {
+      "fileMatch": ["*.hujson"],
+      "schema": {
+        "allowTrailingCommas": true
+      }
+    }
+  ],
+  "remote.SSH.remotePlatform": {
+    "desktop": "linux"
+  },
+  "remote.autoForwardPortsSource": "hybrid",
+  "remote.extensionKind": {
+    "GitHub.copilot": ["ui"]
+  },
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.shellIntegration.enabled": false,
+  "window.menuBarVisibility": "hidden",
+  "workbench.startupEditor": "none",
+  "latex-workshop.formatting.latex": "tex-fmt",
+  "hadolint.hadolintPath": "/home/psiegel/.local/bin/hadolint",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "chat.agent.enabled": true,
+  "docker.extension.enableComposeLanguageServer": false,
+  "python.analysis.typeCheckingMode": "strict",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
     },
-    "[dockerfile]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-containers"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    },
-    "[mdx]": {
-        "editor.defaultFormatter": "unifiedjs.vscode-mdx"
-    },
-    "[yaml]": {
-        "diffEditor.ignoreTrimWhitespace": false,
-        "editor.autoIndent": "keep",
-        "editor.defaultFormatter": "redhat.vscode-yaml",
-        "editor.insertSpaces": true,
-        "editor.quickSuggestions": {
-            "comments": false,
-            "other": true,
-            "strings": true
-        },
-        "editor.tabSize": 2
-    },
-    "cSpell.enabled": true,
-    "cmake.pinnedCommands": [
-        "workbench.action.tasks.configureTaskRunner",
-        "workbench.action.tasks.runTask"
-    ],
-    "editor.stickyScroll.enabled": true,
-    "files.associations": {
-        "*.env": "properties",
-        "*.hujson": "jsonc",
-        ".ansible-lint": "ansible"
-    },
-    "github.copilot.enable": {
-        "*": true,
-        "markdown": true,
-        "plaintext": false,
-        "scminput": false
-    },
-    "json.schemas": [
-        {
-            "fileMatch": [
-                "*.hujson"
-            ],
-            "schema": {
-                "allowTrailingCommas": true
-            }
-        }
-    ],
-    "remote.SSH.remotePlatform": {
-        "desktop": "linux"
-    },
-    "remote.autoForwardPortsSource": "hybrid",
-    "remote.extensionKind": {
-        "GitHub.copilot": [
-            "ui"
-        ]
-    },
-    "telemetry.telemetryLevel": "off",
-    "terminal.integrated.defaultProfile.linux": "fish",
-    "terminal.integrated.enableMultiLinePasteWarning": "never",
-    "terminal.integrated.inheritEnv": false,
-    "terminal.integrated.fontFamily": "MesloLGS NF",
-    "window.menuBarVisibility": "hidden",
-    "workbench.startupEditor": "none",
-    "latex-workshop.formatting.latex": "tex-fmt",
-    "hadolint.hadolintPath": "/home/psiegel/.local/bin/hadolint",
-    "C_Cpp.intelliSenseEngine": "disabled",
-    "chat.agent.enabled": true,
-    "docker.extension.enableComposeLanguageServer": false,
-    "python.analysis.typeCheckingMode": "strict",
-    "[dockercompose]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.autoIndent": "advanced",
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": false,
-            "strings": true
-        },
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "[github-actions-workflow]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "terminal.integrated.shellIntegration.enabled": false,
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
 }
