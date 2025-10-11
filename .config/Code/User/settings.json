@@ -95,4 +95,5 @@
     "[github-actions-workflow]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
+    "terminal.integrated.shellIntegration.enabled": false,
 }
