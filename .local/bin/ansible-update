@@ -1,10 +1,11 @@
 #!/bin/bash
 
+export ANSIBLE_BECOME_EXE=sudo.ws
 export ANSIBLE_FORCE_COLOR=1
-export PY_COLORS=1
-export PYTHONUNBUFFERED=1
 export ANSIBLE_HOST_PATTERN_MISMATCH=ignore
 export ANSIBLE_LOG_PATH=$HOME/.ansible/log
+export PY_COLORS=1
+export PYTHONUNBUFFERED=1
 
 extra_opts=""
 
@@ -15,8 +16,8 @@ fi
 
 # shellcheck disable=SC2086
 ansible-pull ansible/desktops.yml \
-    -U git@github.com:yeetypete/homelab.git \
     -C main \
-    -i ansible/inventory/inventory.yml \
     -e override_hosts=localhost \
+    -i ansible/inventory/inventory.yml \
+    -U git@github.com:yeetypete/homelab.git \
     $extra_opts "$@"
