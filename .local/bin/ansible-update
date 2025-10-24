@@ -1,6 +1,11 @@
 #!/bin/bash
 
-export ANSIBLE_BECOME_EXE=sudo.ws
+# Ubuntu >= 25.10 ships with sudo-rs which is not yet supported by Ansible.
+# See: https://github.com/ansible/ansible/issues/85837
+if command -v sudo.ws >/dev/null 2>&1; then
+    export ANSIBLE_BECOME_EXE=sudo.ws
+fi
+
 export ANSIBLE_FORCE_COLOR=1
 export ANSIBLE_HOST_PATTERN_MISMATCH=ignore
 export ANSIBLE_LOG_PATH=$HOME/.ansible/log
