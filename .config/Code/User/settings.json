@@ -60,7 +60,7 @@
   "remote.SSH.remotePlatform": {
     "desktop": "linux"
   },
-  "remote.autoForwardPortsSource": "hybrid",
+  "remote.autoForwardPorts": false,
   "remote.extensionKind": {
     "GitHub.copilot": ["ui"]
   },
