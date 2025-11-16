@@ -34,6 +34,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Run Deskflow on startup
+exec --no-startup-id flatpak run org.deskflow.deskflow
+
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 10
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 10
