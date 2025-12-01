@@ -23,6 +23,7 @@ fish_add_path $HOME/.local/bin
 
 if type -q go
     set -x GOPATH $HOME/go
+    fish_add_path $GOPATH/bin
 end
 
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
