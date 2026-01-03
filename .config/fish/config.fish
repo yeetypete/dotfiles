@@ -33,6 +33,10 @@ alias ard="autorandr default"
 alias arg="autorandr game"
 alias arw="autorandr work"
 
+# tailscale
+alias tsw="sudo tailscale switch work"
+alias tsp="sudo tailscale switch personal"
+
 if not set -q SSH_CONNECTION
     set -x SSH_AUTH_SOCK ~/.1password/agent.sock
 end
