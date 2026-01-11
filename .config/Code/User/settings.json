@@ -33,10 +33,6 @@
     "editor.tabSize": 2
   },
   "cSpell.enabled": true,
-  "cmake.pinnedCommands": [
-    "workbench.action.tasks.configureTaskRunner",
-    "workbench.action.tasks.runTask"
-  ],
   "editor.stickyScroll.enabled": true,
   "files.associations": {
     "*.env": "properties",
