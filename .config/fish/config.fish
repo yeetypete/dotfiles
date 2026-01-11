@@ -56,4 +56,6 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
-starship init fish | source
+if type -q starship
+  starship init fish | source
+end
