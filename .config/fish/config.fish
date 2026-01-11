@@ -42,7 +42,7 @@ if not set -q SSH_CONNECTION
 end
 
 function fzf_tailscale_nodes
-    set node (tailscale status | awk '!/^#/ && $2 != "" {print $2}' | fzf)
+    set node (tailscale status | awk '!/^#/ && $2 != "" {print $2}' | fzf --layout=reverse)
     if test -n "$node"
         commandline -i "$node"
     end
