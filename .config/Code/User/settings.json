@@ -67,8 +67,6 @@
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.defaultProfile.linux": "fish",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "terminal.integrated.inheritEnv": false,
   "window.menuBarVisibility": "hidden",
   "workbench.startupEditor": "none",
   "latex-workshop.formatting.latex": "tex-fmt",
@@ -76,7 +74,6 @@
   "C_Cpp.intelliSenseEngine": "disabled",
   "chat.agent.enabled": true,
   "docker.extension.enableComposeLanguageServer": false,
-  "python.analysis.typeCheckingMode": "strict",
   "[dockercompose]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
