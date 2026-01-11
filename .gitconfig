@@ -19,3 +19,7 @@
 	process = git-lfs filter-process
 [credential]
 	helper = store
+[core]
+	fsmonitor = true
+[feature]
+	manyFiles = true
