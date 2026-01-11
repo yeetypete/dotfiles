@@ -23,3 +23,5 @@
 	fsmonitor = true
 [feature]
 	manyFiles = true
+[index]
+	version = 4
