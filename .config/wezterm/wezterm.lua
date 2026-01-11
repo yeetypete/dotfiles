@@ -16,6 +16,7 @@ config.check_for_updates = false
 config.color_scheme = "Dark+"
 config.enable_tab_bar = false
 config.font_size = 12.0
+config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.max_fps = 120
 config.use_fancy_tab_bar = false
 config.window_decorations = "RESIZE"
