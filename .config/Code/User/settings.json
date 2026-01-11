@@ -69,7 +69,6 @@
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.inheritEnv": false,
-  "terminal.integrated.shellIntegration.enabled": false,
   "window.menuBarVisibility": "hidden",
   "workbench.startupEditor": "none",
   "latex-workshop.formatting.latex": "tex-fmt",
@@ -94,5 +93,6 @@
   },
   "editor.smoothScrolling": true,
   "workbench.list.smoothScrolling": true,
-  "terminal.integrated.smoothScrolling": true
+  "terminal.integrated.smoothScrolling": true,
+  "ansible.lightspeed.enabled": false
 }
