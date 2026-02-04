@@ -2,4 +2,4 @@
 
 dockerfile="$1"
 shift
-docker run --rm -i docker.io/hadolint/hadolint hadolint "$@" - < "$dockerfile"
+docker run --rm -i docker.io/hadolint/hadolint hadolint --no-color "$@" - < "$dockerfile"
