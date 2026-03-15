@@ -87,5 +87,6 @@
   "editor.smoothScrolling": true,
   "workbench.list.smoothScrolling": true,
   "terminal.integrated.smoothScrolling": true,
-  "ansible.lightspeed.enabled": false
+  "ansible.lightspeed.enabled": false,
+  "python-envs.terminal.autoActivationType": "off",
 }
