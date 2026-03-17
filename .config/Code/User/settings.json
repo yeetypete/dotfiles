@@ -89,4 +89,6 @@
   "terminal.integrated.smoothScrolling": true,
   "ansible.lightspeed.enabled": false,
   "python-envs.terminal.autoActivationType": "off",
+  "python.languageServer": "None",
+  "basedpyright.disableLanguageServices": true,
 }
