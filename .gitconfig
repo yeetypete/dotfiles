@@ -26,3 +26,5 @@
 	manyFiles = true
 [index]
 	version = 4
+[merge]
+	conflictstyle = zdiff3
