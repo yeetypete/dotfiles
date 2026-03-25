@@ -91,4 +91,5 @@
   "python-envs.terminal.autoActivationType": "off",
   "python.languageServer": "None",
   "basedpyright.disableLanguageServices": true,
+  "workbench.colorTheme": "Dark Modern",
 }
