@@ -92,4 +92,5 @@
   "python.languageServer": "None",
   "basedpyright.disableLanguageServices": true,
   "workbench.colorTheme": "Dark Modern",
+  "interactiveWindow.collapseCellInputCode": "never"
 }
