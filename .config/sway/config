@@ -16,7 +16,7 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu rofi -show drun -run-command "fish -i -c '{cmd}'"
+set $menu rofi -show drun
 
 # Font for window titles
 font pango:DejaVu Sans Mono 12
@@ -288,13 +288,14 @@ exec swayidle -w \
     lock 'swaylock -f'
 
 ### Autostart
+# dex handles nm-applet (/etc/xdg/autostart) and 1password (~/.config/autostart).
+# polkit-gnome and gnome-keyring-secrets have OnlyShowIn filters that exclude sway,
+# so we launch them explicitly.
 exec dex --autostart --environment sway
-exec nm-applet
 exec dbus-update-activation-environment --all
 exec gnome-keyring-daemon --start --components=secrets
 exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec rfkill block bluetooth
-exec 1password --silent
 exec flatpak run org.deskflow.deskflow
 exec flatpak run com.discordapp.Discord --start-minimized
 
