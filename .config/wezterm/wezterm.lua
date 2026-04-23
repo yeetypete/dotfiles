@@ -19,7 +19,7 @@ config.font_size = 12.0
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.max_fps = 120
 config.use_fancy_tab_bar = false
-config.window_decorations = "RESIZE"
+config.window_decorations = "NONE"
 
 config.keys = {}
 -- and finally, return the configuration to wezterm
