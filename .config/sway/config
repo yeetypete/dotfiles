@@ -244,13 +244,13 @@ bindsym $mod+r mode "resize"
 #
 # Status Bar:
 #
-# Read `man 5 sway-bar` for more information about this section.
+# Waybar with auto-hide
 bar {
-    status_command bumblebee-status
-    hidden_state hide
+    id bar-0
+    swaybar_command waybar
     mode hide
+    hidden_state hide
     modifier $mod
-    tray_output DP-3
 }
 
 ### Appearance
@@ -291,11 +291,10 @@ exec swayidle -w \
 # dex handles nm-applet (/etc/xdg/autostart) and 1password (~/.config/autostart).
 # polkit-gnome and gnome-keyring-secrets have OnlyShowIn filters that exclude sway,
 # so we launch them explicitly.
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dex --autostart --environment sway
-exec dbus-update-activation-environment --all
 exec gnome-keyring-daemon --start --components=secrets
 exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
-exec rfkill block bluetooth
 exec flatpak run org.deskflow.deskflow
 exec flatpak run com.discordapp.Discord --start-minimized
 
