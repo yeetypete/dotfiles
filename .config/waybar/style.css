@@ -33,9 +33,19 @@ window#waybar {
 #memory,
 #network,
 #pulseaudio,
+#backlight,
+#battery,
 #tray,
 #window {
     padding: 0 10px;
+}
+
+#battery.warning {
+    color: #e0b040;
+}
+
+#battery.critical {
+    color: #e05050;
 }
 
 #tray menu {

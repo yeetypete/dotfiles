@@ -8,7 +8,7 @@
 
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock", "tray"],
+  "modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "clock", "tray"],
 
   "sway/workspaces": {
     "disable-scroll": true,
@@ -42,5 +42,19 @@
     "format": "vol {volume}%",
     "format-muted": "muted",
     "on-click": "pavucontrol",
+  },
+  "backlight": {
+    "format": "bright {percent}%",
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%-",
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "bat {capacity}%",
+    "format-charging": "bat {capacity}% +",
+    "format-plugged": "bat {capacity}% =",
   },
 }
