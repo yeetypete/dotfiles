@@ -1,0 +1,22 @@
+font=Monospace 8
+height=300
+border-size=1
+border-radius=4
+border-color=#d8d8d8
+
+icon-path=/usr/share/icons/Adwaita
+
+on-button-middle=dismiss
+on-button-right=dismiss-all
+
+[urgency=low]
+background-color=#282828
+text-color=#585858
+
+[urgency=normal]
+background-color=#383838
+text-color=#d8d8d8
+
+[urgency=critical]
+background-color=#ab4642
+text-color=#e8e8e8
