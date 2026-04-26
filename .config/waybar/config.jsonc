@@ -1,7 +1,6 @@
 {
   "id": "bar-0",
   "ipc": true,
-  "output": "DP-3",
   "layer": "top",
   "position": "bottom",
   "height": 30,
