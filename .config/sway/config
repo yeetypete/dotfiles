@@ -68,7 +68,7 @@ include /etc/sway/config-vars.d/*
 # You can also configure each device individually.
 # Read `man 5 sway-input` for more information about this section.
 
-input type:pointer {
+input type:touchpad {
     natural_scroll enabled
 }
 
