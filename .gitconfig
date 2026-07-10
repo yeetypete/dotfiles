@@ -20,6 +20,7 @@
 [credential]
 	helper = store
 [core]
+	pager = delta
 	fsmonitor = true
 	untrackedcache = true
 [feature]
@@ -28,3 +29,7 @@
 	version = 4
 [merge]
 	conflictStyle = zdiff3
+[delta]
+	navigate = true
+[interactive]
+	diffFilter = delta --color-only
