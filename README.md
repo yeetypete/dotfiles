@@ -6,19 +6,16 @@ Configuration files managed with [chezmoi](https://www.chezmoi.io).
 
 Install chezmoi, clone this repository and apply it to `$HOME` in one step.
 On a machine with existing configs this overwrites them without prompting, so
-run `chezmoi init --ssh yeetypete` and inspect `chezmoi diff` first if that
-matters.
+run `chezmoi init yeetypete` and inspect `chezmoi diff` first if that matters.
 
 ```shell
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply --ssh yeetypete
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply yeetypete
 ```
-
-Drop `--ssh` to clone over HTTPS on machines without a key loaded.
 
 ## Usage
 
-The source repository lives in `~/.local/share/chezmoi`; `chezmoi apply` writes
-it out to `$HOME`.
+The source repository lives in `~/.local/share/chezmoi`. Running `chezmoi
+apply` writes it out to `$HOME`.
 
 ```shell
 chezmoi add ~/.config/foo/bar     # start tracking a file

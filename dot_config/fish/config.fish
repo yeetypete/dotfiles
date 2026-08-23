@@ -27,11 +27,6 @@ if type -q go
     fish_add_path $GOPATH/bin
 end
 
-# autorandr
-alias ard="autorandr default"
-alias arg="autorandr game"
-alias arw="autorandr work"
-
 # tailscale
 alias tsw="sudo tailscale switch work"
 alias tsp="sudo tailscale switch personal"
