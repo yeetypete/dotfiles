@@ -10,7 +10,7 @@ run `chezmoi init yeetypete` and inspect `chezmoi diff` first.
 
 ```shell
 sudo apt install -y git-lfs
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply --git-lfs yeetypete
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b "$HOME/.local/bin" init --apply --git-lfs yeetypete
 ```
 
 ## Usage
