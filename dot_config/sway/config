@@ -90,9 +90,10 @@ input type:touchpad {
     # Window switcher
     bindsym $mod+Shift+d exec rofi -show window
 
-    # Step through wallpapers ($mod+w is taken by "layout tabbed")
-    bindsym $mod+p exec $HOME/.local/bin/wallpaper next
-    bindsym $mod+Shift+p exec $HOME/.local/bin/wallpaper prev
+    # Step through wallpapers. Bracket keys avoid $mod+w (layout tabbed) and
+    # $mod+Shift+P (system mode), which Shift+p also produces.
+    bindsym $mod+bracketright exec $HOME/.local/bin/wallpaper next
+    bindsym $mod+bracketleft exec $HOME/.local/bin/wallpaper prev
 
     # Drag tiling windows by titlebar
     tiling_drag enable
