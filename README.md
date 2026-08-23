@@ -6,7 +6,7 @@ Configuration files managed with [chezmoi](https://www.chezmoi.io).
 
 Install chezmoi, clone this repository and apply it to `$HOME` in one step.
 On a machine with existing configs this overwrites them without prompting, so
-run `chezmoi init yeetypete` and inspect `chezmoi diff` first if that matters.
+run `chezmoi init yeetypete` and inspect `chezmoi diff` first.
 
 ```shell
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply yeetypete
