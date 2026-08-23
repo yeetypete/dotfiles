@@ -27,3 +27,6 @@ chezmoi cd                        # open a shell in the source repo
 
 Editing a tracked file directly in `$HOME` does not update the repository. Run
 `chezmoi re-add` to pull those changes back into the source state.
+
+See the chezmoi [README](https://github.com/twpayne/chezmoi) for everything
+else.
