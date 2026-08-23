@@ -1,0 +1,51 @@
+#!/bin/bash
+# Step through the wallpapers in ~/Pictures/Wallpapers.
+#
+#   wallpaper        re-apply the current wallpaper, used at sway startup
+#   wallpaper next   step forwards
+#   wallpaper prev   step backwards
+#
+# The current wallpaper is remembered by name rather than by position, so
+# adding or removing images does not shuffle the order of the rest.
+set -euo pipefail
+
+dir="${WALLPAPER_DIR:-$HOME/Pictures/Wallpapers}"
+state="${XDG_CACHE_HOME:-$HOME/.cache}/wallpaper"
+
+[ -d "$dir" ] || exit 0
+
+list=$(find "$dir" -maxdepth 1 -type f \
+    \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) | sort)
+[ -n "$list" ] || exit 0
+count=$(printf '%s\n' "$list" | wc -l)
+
+# Locate the current wallpaper, falling back to the first if it is unset or
+# has since been deleted. grep exits non-zero when it is gone, hence || true.
+index=0
+current=$(cat "$state" 2>/dev/null || true)
+if [ -n "$current" ]; then
+    index=$(printf '%s\n' "$list" | grep -nxF -- "$current" | cut -d: -f1 || true)
+    : "${index:=0}"
+fi
+
+case "${1:-current}" in
+    next)
+        index=$((index % count + 1))
+        ;;
+    prev)
+        index=$((index - 1))
+        if [ "$index" -lt 1 ]; then index=$count; fi
+        ;;
+    current)
+        if [ "$index" -lt 1 ]; then index=1; fi
+        ;;
+    *)
+        echo "usage: ${0##*/} [next|prev]" >&2
+        exit 64
+        ;;
+esac
+
+img=$(printf '%s\n' "$list" | sed -n "${index}p")
+mkdir -p "$(dirname "$state")"
+printf '%s\n' "$img" > "$state"
+swaymsg output '*' bg "$img" fill >/dev/null

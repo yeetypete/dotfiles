@@ -90,6 +90,10 @@ input type:touchpad {
     # Window switcher
     bindsym $mod+Shift+d exec rofi -show window
 
+    # Step through wallpapers
+    bindsym $mod+w exec $HOME/.local/bin/wallpaper next
+    bindsym $mod+Shift+w exec $HOME/.local/bin/wallpaper prev
+
     # Drag tiling windows by titlebar
     tiling_drag enable
 
@@ -271,7 +275,7 @@ workspace_auto_back_and_forth yes
 ### Output configuration
 output eDP-1 mode 1920x1200@60Hz
 output DP-3 mode 3840x2160@240Hz
-exec_always $HOME/.local/bin/random-wallpaper
+exec_always $HOME/.local/bin/wallpaper
 
 ### System mode (lock/logout/suspend/reboot/shutdown)
 set $mode_system System: (l) Lock, (e) Logout, (s) Suspend, (r) Reboot, (Shift+s) Shutdown
