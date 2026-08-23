@@ -9,6 +9,7 @@ On a machine with existing configs this overwrites them without prompting, so
 run `chezmoi init yeetypete` and inspect `chezmoi diff` first.
 
 ```shell
+sudo apt install -y git-lfs
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply yeetypete
 ```
 
