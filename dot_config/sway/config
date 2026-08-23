@@ -90,6 +90,11 @@ input type:touchpad {
     # Window switcher
     bindsym $mod+Shift+d exec rofi -show window
 
+    # Step through wallpapers. Bracket keys avoid $mod+w (layout tabbed) and
+    # $mod+Shift+P (system mode), which Shift+p also produces.
+    bindsym $mod+bracketright exec $HOME/.local/bin/wallpaper next
+    bindsym $mod+bracketleft exec $HOME/.local/bin/wallpaper prev
+
     # Drag tiling windows by titlebar
     tiling_drag enable
 
@@ -270,8 +275,10 @@ workspace_auto_back_and_forth yes
 
 ### Output configuration
 output eDP-1 mode 1920x1200@60Hz
-output DP-3 mode 3840x2160@240Hz
-output * bg $HOME/Pictures/Wallpapers/nasa-jp.png fill
+# Keyed on the monitor identifier rather than the connector, so it applies
+# only on the host this display is attached to.
+output "Samsung Electric Company Odyssey G80SD H1AK500000" mode 3840x2160@240Hz
+exec_always $HOME/.local/bin/wallpaper
 
 ### System mode (lock/logout/suspend/reboot/shutdown)
 set $mode_system System: (l) Lock, (e) Logout, (s) Suspend, (r) Reboot, (Shift+s) Shutdown

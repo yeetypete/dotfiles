@@ -13,6 +13,9 @@ if status is-interactive
     if type -q uvx
         uvx --generate-shell-completion fish | source
     end
+    if type -q chezmoi
+        chezmoi completion fish | source
+    end
 end
 
 set fish_greeting
@@ -23,13 +26,6 @@ if type -q go
     set -x GOPATH $HOME/go
     fish_add_path $GOPATH/bin
 end
-
-alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-
-# autorandr
-alias ard="autorandr default"
-alias arg="autorandr game"
-alias arw="autorandr work"
 
 # tailscale
 alias tsw="sudo tailscale switch work"
