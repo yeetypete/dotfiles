@@ -271,7 +271,7 @@ workspace_auto_back_and_forth yes
 ### Output configuration
 output eDP-1 mode 1920x1200@60Hz
 output DP-3 mode 3840x2160@240Hz
-output * bg $HOME/Pictures/Wallpapers/nasa-jp.png fill
+exec_always $HOME/.local/bin/random-wallpaper
 
 ### System mode (lock/logout/suspend/reboot/shutdown)
 set $mode_system System: (l) Lock, (e) Logout, (s) Suspend, (r) Reboot, (Shift+s) Shutdown
