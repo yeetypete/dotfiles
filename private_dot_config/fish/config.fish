@@ -16,6 +16,9 @@ if status is-interactive
     if type -q chezmoi
         chezmoi completion fish | source
     end
+    if type -q fzf
+        fzf --fish | source
+    end
 end
 
 set fish_greeting
