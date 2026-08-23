@@ -24,10 +24,6 @@ font pango:DejaVu Sans Mono 12
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
-# Keyed on the monitor identifier rather than the connector, so it applies
-# only on the host this display is attached to.
-output "Samsung Electric Company Odyssey G80SD H1AK500000" mode 3840x2160@240Hz
-
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # This is commented in Debian, because the Sway wallpaper files are in a separate
@@ -94,9 +90,9 @@ input type:touchpad {
     # Window switcher
     bindsym $mod+Shift+d exec rofi -show window
 
-    # Step through wallpapers
-    bindsym $mod+w exec $HOME/.local/bin/wallpaper next
-    bindsym $mod+Shift+w exec $HOME/.local/bin/wallpaper prev
+    # Step through wallpapers ($mod+w is taken by "layout tabbed")
+    bindsym $mod+p exec $HOME/.local/bin/wallpaper next
+    bindsym $mod+Shift+p exec $HOME/.local/bin/wallpaper prev
 
     # Drag tiling windows by titlebar
     tiling_drag enable
@@ -278,7 +274,9 @@ workspace_auto_back_and_forth yes
 
 ### Output configuration
 output eDP-1 mode 1920x1200@60Hz
-output DP-3 mode 3840x2160@240Hz
+# Keyed on the monitor identifier rather than the connector, so it applies
+# only on the host this display is attached to.
+output "Samsung Electric Company Odyssey G80SD H1AK500000" mode 3840x2160@240Hz
 exec_always $HOME/.local/bin/wallpaper
 
 ### System mode (lock/logout/suspend/reboot/shutdown)
