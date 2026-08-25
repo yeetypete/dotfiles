@@ -307,7 +307,6 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 exec dex --autostart --environment sway
 exec gnome-keyring-daemon --start --components=secrets
 exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
-exec flatpak run org.deskflow.deskflow
 exec flatpak run com.discordapp.Discord --start-minimized
 
 include /etc/sway/config.d/*
