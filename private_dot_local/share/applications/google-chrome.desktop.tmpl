@@ -1,0 +1,6 @@
+{{- /* Patch the system Chrome launcher to enable NVDEC video decode via nvidia-vaapi-driver.
+       Harmless on non-NVIDIA systems. Renders empty (no file) when Chrome is not installed. */ -}}
+{{- $sys := "/usr/share/applications/google-chrome.desktop" -}}
+{{- if stat $sys -}}
+{{ include $sys | replace "google-chrome-stable" "google-chrome-stable --enable-features=VaapiOnNvidiaGPUs,VaapiVideoDecoder" }}
+{{- end -}}
